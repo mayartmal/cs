@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Пишем и читаем файл - База знаний Python</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "\u041f\u0438\u0448\u0435\u043c \u0438 \u0447\u0438\u0442\u0430\u0435\u043c \u0444\u0430\u0439\u043b";
+    var mkdocs_page_input_path = "io/sep.md";
+    var mkdocs_page_url = "/io/sep/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> База знаний Python</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Привет</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../arrays/coupon/">Коллекция купонов</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../arrays/matrix/">Операции с матрицами</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../arrays/coupon_set/">Коллекция купонов. Множество</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../arrays/primesieve/">Решето Эратосфена</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../arrays/precalc/">Вычисление заранее</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../arrays/sample/">Случайные перестановки</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../flow/euclid_distance/">Евклидово расстояние</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../flow/rnd/">Случайные числа</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../flow/newton/">Метод Ньютона</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../flow/leap_year/">Високосный год</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../flow/income_rate/">Непрерывный процент</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../flow/permutations/">Перестановки</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../flow/rgb/">RGB и CMYK</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../flow/mid_five/">Среднее из 5</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../flow/monte_carlo/">Метод Монте-Карло</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../flow/prime/">Множитеи и делители</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../flow/harmonic/">Гармонические числа</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../flow/gauss/">Гауссовы случайные числа</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../flow/polar/">Полярные координаты</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../flow/is_in_order/">Числа в порядке возрастания</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../flow/isbn/">Контрольная сумма</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../flow/bin/">Двоичная форма</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../flow/dragon_curves/">Кривые дракона</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../flow/quadratic/">Квадратное уравнение</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../flow/earth/">Большая окружность</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../flow/sums_products/">Суммы</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../flow/series/">Ряды</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../save_post_calcs/">Пишем и читаем json файл</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Пишем и читаем файл</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#_1">Пишем и читаем файл</a></li>
+    
+
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">База знаний Python</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Пишем и читаем файл</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>"</p>
+<h1 id="_1">Пишем и читаем файл</h1>
+<p>Записывает и считывает простой файл.</p>
+<pre><code>file sep.txt
+------------
+a 1
+b 2
+
+&gt;&gt;&gt; x = [
+...     ('a', 1),
+...     ('b', 2)
+... ]
+
+# Пишем
+&gt;&gt;&gt; with open('sep.txt', 'w') as f:
+...     for key, value in x:
+...         _ = f.write("{} {}\\n".format(key, value))
+
+# Читаем
+&gt;&gt;&gt; with open('sep.txt', 'r') as f:
+...     for line in f:
+...         print(line.split())
+['a', '1']
+['b', '2']
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../save_post_calcs/" class="btn btn-neutral" title="Пишем и читаем json файл"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../save_post_calcs/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+
+</body>
+</html>
