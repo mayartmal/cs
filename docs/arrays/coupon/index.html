@@ -60,17 +60,15 @@
     <li class="toctree-l2"><a href="#_1">Коллекция купонов</a></li>
     
 
+    <li class="toctree-l2"><a href="#_2">Коллекция купонов. Множество</a></li>
+    
+
     </ul>
 	    </li>
           
             <li class="toctree-l1">
 		
     <a class="" href="../matrix/">Операции с матрицами</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../coupon_set/">Коллекция купонов. Множество</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -195,12 +193,7 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../../io/save_post_calcs/">Пишем и читаем json файл</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../io/sep/">Пишем и читаем файл</a>
+    <a class="" href="../../io_/save_file/">Пишем и читаем файл</a>
 	    </li>
           
         </ul>
@@ -250,6 +243,25 @@
 ...     if not isCollected[value]:
 ...         collected += 1
 ...         isCollected[value] = True
+
+&gt;&gt;&gt; print(count)
+</code></pre>
+<h1 id="_2">Коллекция купонов. Множество</h1>
+<pre><code>&gt;&gt;&gt; import random
+
+&gt;&gt;&gt; n = 10**3
+
+&gt;&gt;&gt; isCollected = set()
+&gt;&gt;&gt; collected = 0
+&gt;&gt;&gt; count = 0
+
+&gt;&gt;&gt; while collected &lt; n:
+...     value = random.randrange(n)
+...     count += 1
+...     if value in isCollected:
+...         continue
+...     collected += 1
+...     isCollected.add(value)
 
 &gt;&gt;&gt; print(count)
 </code></pre>

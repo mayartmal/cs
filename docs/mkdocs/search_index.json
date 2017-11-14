@@ -12,13 +12,18 @@
         },
         {
             "location": "/arrays/coupon/",
-            "text": "\u041a\u043e\u043b\u043b\u0435\u043a\u0446\u0438\u044f \u043a\u0443\u043f\u043e\u043d\u043e\u0432\n\n\n>>> import random\n\n>>> n = 10**3\n\n>>> isCollected = [False for _ in range(n)]\n>>> collected = 0\n>>> count = 0\n\n>>> while collected < n:\n...     value = random.randrange(n)\n...     count += 1\n...     if not isCollected[value]:\n...         collected += 1\n...         isCollected[value] = True\n\n>>> print(count)",
+            "text": "\u041a\u043e\u043b\u043b\u0435\u043a\u0446\u0438\u044f \u043a\u0443\u043f\u043e\u043d\u043e\u0432\n\n\n>>> import random\n\n>>> n = 10**3\n\n>>> isCollected = [False for _ in range(n)]\n>>> collected = 0\n>>> count = 0\n\n>>> while collected < n:\n...     value = random.randrange(n)\n...     count += 1\n...     if not isCollected[value]:\n...         collected += 1\n...         isCollected[value] = True\n\n>>> print(count)\n\n\n\n\u041a\u043e\u043b\u043b\u0435\u043a\u0446\u0438\u044f \u043a\u0443\u043f\u043e\u043d\u043e\u0432. \u041c\u043d\u043e\u0436\u0435\u0441\u0442\u0432\u043e\n\n\n>>> import random\n\n>>> n = 10**3\n\n>>> isCollected = set()\n>>> collected = 0\n>>> count = 0\n\n>>> while collected < n:\n...     value = random.randrange(n)\n...     count += 1\n...     if value in isCollected:\n...         continue\n...     collected += 1\n...     isCollected.add(value)\n\n>>> print(count)",
             "title": "\u041a\u043e\u043b\u043b\u0435\u043a\u0446\u0438\u044f \u043a\u0443\u043f\u043e\u043d\u043e\u0432"
         },
         {
             "location": "/arrays/coupon/#_1",
             "text": ">>> import random\n\n>>> n = 10**3\n\n>>> isCollected = [False for _ in range(n)]\n>>> collected = 0\n>>> count = 0\n\n>>> while collected < n:\n...     value = random.randrange(n)\n...     count += 1\n...     if not isCollected[value]:\n...         collected += 1\n...         isCollected[value] = True\n\n>>> print(count)",
             "title": "\u041a\u043e\u043b\u043b\u0435\u043a\u0446\u0438\u044f \u043a\u0443\u043f\u043e\u043d\u043e\u0432"
+        },
+        {
+            "location": "/arrays/coupon/#_2",
+            "text": ">>> import random\n\n>>> n = 10**3\n\n>>> isCollected = set()\n>>> collected = 0\n>>> count = 0\n\n>>> while collected < n:\n...     value = random.randrange(n)\n...     count += 1\n...     if value in isCollected:\n...         continue\n...     collected += 1\n...     isCollected.add(value)\n\n>>> print(count)",
+            "title": "\u041a\u043e\u043b\u043b\u0435\u043a\u0446\u0438\u044f \u043a\u0443\u043f\u043e\u043d\u043e\u0432. \u041c\u043d\u043e\u0436\u0435\u0441\u0442\u0432\u043e"
         },
         {
             "location": "/arrays/matrix/",
@@ -29,16 +34,6 @@
             "location": "/arrays/matrix/#_1",
             "text": "\u041c\u0430\u0442\u0440\u0438\u0447\u043d\u043e - \u0432\u0435\u043a\u0442\u043e\u0440\u043d\u043e\u0435 \u0443\u043c\u043d\u043e\u0436\u0435\u043d\u0438\u0435  >>> A = [[2, 3],\n...      [1, 2]]\n>>> B = [1, 2]\n>>> S = [0 for _ in range(len(B))]\n>>> for i in range(len(A)):\n...     for j in range(len(B)):\n...         S[i] += A[i][j] * B[j]\n>>> S\n[8, 5]  \u0412\u0435\u043a\u0442\u043e\u0440\u043d\u043e - \u043c\u0430\u0442\u0440\u0438\u0447\u043d\u043e\u0435 \u0443\u043c\u043d\u043e\u0436\u0435\u043d\u0438\u0435  >>> A = [1, 2]\n>>> B = [[2, 3],\n...      [1, 2]]\n>>> S = [0 for _ in range(len(A))]\n>>> for j in range(len(A)):\n...     for i in range(len(B)):\n...         S[j] += A[i] * B[i][j] \n>>> S\n[4, 7]  \u041f\u0435\u0440\u0435\u043c\u043d\u043e\u0436\u0435\u043d\u0438\u0435 \u0441\u0442\u0440\u043e\u043a\u0438 \u043d\u0430 \u0441\u0442\u043e\u043b\u0431\u0435\u0446  >>> A = [[2, 4]]\n>>> B = [[.5],\n...      [.5]]\n\n>>> s = 0\n>>> for row in range(len(A)):\n...     for col in range(len(A[row])):\n...         s += A[row][col] * B[col][row]  \u041f\u0435\u0440\u0435\u043c\u043d\u043e\u0436\u0435\u043d\u0438\u0435 \u0434\u0432\u0443\u0445 \u043c\u0430\u0442\u0440\u0438\u0446 n x n  >>> A = [[2,  2], \n...      [4,  4],\n...      [6,  6]]\n>>> B = [[1,  1],\n...      [2,  2]]\n\n>>> C = []\n>>> for i in range(len(A)):\n...     c = [0 for j in range(len(B))]\n...     C.append(c)\n\n>>> for i in range(len(A)):\n...     for j in range(len(B)):\n...         for k in range(len(B)):\n...             C[i][j] += A[i][k] * B[k][j]\n\n>>> C\n[[6, 6], [12, 12], [18, 18]]",
             "title": "\u041e\u043f\u0435\u0440\u0430\u0446\u0438\u0438 \u0441 \u043c\u0430\u0442\u0440\u0438\u0446\u0430\u043c\u0438"
-        },
-        {
-            "location": "/arrays/coupon_set/",
-            "text": "\u041a\u043e\u043b\u043b\u0435\u043a\u0446\u0438\u044f \u043a\u0443\u043f\u043e\u043d\u043e\u0432. \u041c\u043d\u043e\u0436\u0435\u0441\u0442\u0432\u043e\n\n\n>>> import random\n\n>>> n = 10**3\n\n>>> isCollected = set()\n>>> collected = 0\n>>> count = 0\n\n>>> while collected < n:\n...     value = random.randrange(n)\n...     count += 1\n...     if value in isCollected:\n...         continue\n...     collected += 1\n...     isCollected.add(value)\n\n>>> print(count)",
-            "title": "\u041a\u043e\u043b\u043b\u0435\u043a\u0446\u0438\u044f \u043a\u0443\u043f\u043e\u043d\u043e\u0432. \u041c\u043d\u043e\u0436\u0435\u0441\u0442\u0432\u043e"
-        },
-        {
-            "location": "/arrays/coupon_set/#_1",
-            "text": ">>> import random\n\n>>> n = 10**3\n\n>>> isCollected = set()\n>>> collected = 0\n>>> count = 0\n\n>>> while collected < n:\n...     value = random.randrange(n)\n...     count += 1\n...     if value in isCollected:\n...         continue\n...     collected += 1\n...     isCollected.add(value)\n\n>>> print(count)",
-            "title": "\u041a\u043e\u043b\u043b\u0435\u043a\u0446\u0438\u044f \u043a\u0443\u043f\u043e\u043d\u043e\u0432. \u041c\u043d\u043e\u0436\u0435\u0441\u0442\u0432\u043e"
         },
         {
             "location": "/arrays/primesieve/",
@@ -336,24 +331,19 @@
             "title": "\u0420\u044f\u0434\u044b"
         },
         {
-            "location": "/io/save_post_calcs/",
-            "text": "\u041f\u0438\u0448\u0435\u043c \u0438 \u0447\u0438\u0442\u0430\u0435\u043c json \u0444\u0430\u0439\u043b\n\n\n>>> import json\n\n>>> x = {\n...     'a': 1,\n...     'b': 2\n... }\n\n\n# \u041f\u0438\u0448\u0435\u043c\n>>> with open('x.json', 'w') as f:\n...     _ = f.write(json.dumps(x))\n\n\n# \u0427\u0438\u0442\u0430\u0435\u043c\n>>> with open('x.json', 'r') as f:\n...     z = json.load(f)\n\n\n>>> print(isinstance(z, dict))\nTrue\n>>> print(z['a'])\n1",
-            "title": "\u041f\u0438\u0448\u0435\u043c \u0438 \u0447\u0438\u0442\u0430\u0435\u043c json \u0444\u0430\u0439\u043b"
+            "location": "/io_/save_file/",
+            "text": "\u041f\u0438\u0448\u0435\u043c \u0438 \u0447\u0438\u0442\u0430\u0435\u043c json \u0444\u0430\u0439\u043b\n\n\n>>> import json\n\n>>> x = {\n...     'a': 1,\n...     'b': 2\n... }\n\n\n# \u041f\u0438\u0448\u0435\u043c\n>>> with open('x.json', 'w') as f:\n...     _ = f.write(json.dumps(x))\n\n\n# \u0427\u0438\u0442\u0430\u0435\u043c\n>>> with open('x.json', 'r') as f:\n...     z = json.load(f)\n\n\n>>> print(isinstance(z, dict))\nTrue\n>>> print(z['a'])\n1\n\n\n\n\u041f\u0438\u0448\u0435\u043c \u0438 \u0447\u0438\u0442\u0430\u0435\u043c \u0444\u0430\u0439\u043b \u043a\u043b\u044e\u0447-\u0437\u043d\u0430\u0447\u0435\u043d\u0438\u0435\n\n\n\u0417\u0430\u043f\u0438\u0441\u044b\u0432\u0430\u0435\u0442 \u0438 \u0441\u0447\u0438\u0442\u044b\u0432\u0430\u0435\u0442 \u043f\u0440\u043e\u0441\u0442\u043e\u0439 \u0444\u0430\u0439\u043b.\n\n\nfile sep.txt\n------------\na 1\nb 2\n\n>>> x = [\n...     ('a', 1),\n...     ('b', 2)\n... ]\n\n# \u041f\u0438\u0448\u0435\u043c\n>>> with open('sep.txt', 'w') as f:\n...     for key, value in x:\n...         _ = f.write(\"{} {}\\\\n\".format(key, value))\n\n# \u0427\u0438\u0442\u0430\u0435\u043c\n>>> with open('sep.txt', 'r') as f:\n...     for line in f:\n...         print(line.split())\n['a', '1']\n['b', '2']",
+            "title": "\u041f\u0438\u0448\u0435\u043c \u0438 \u0447\u0438\u0442\u0430\u0435\u043c \u0444\u0430\u0439\u043b"
         },
         {
-            "location": "/io/save_post_calcs/#json",
+            "location": "/io_/save_file/#json",
             "text": ">>> import json\n\n>>> x = {\n...     'a': 1,\n...     'b': 2\n... }\n\n\n# \u041f\u0438\u0448\u0435\u043c\n>>> with open('x.json', 'w') as f:\n...     _ = f.write(json.dumps(x))\n\n\n# \u0427\u0438\u0442\u0430\u0435\u043c\n>>> with open('x.json', 'r') as f:\n...     z = json.load(f)\n\n\n>>> print(isinstance(z, dict))\nTrue\n>>> print(z['a'])\n1",
             "title": "\u041f\u0438\u0448\u0435\u043c \u0438 \u0447\u0438\u0442\u0430\u0435\u043c json \u0444\u0430\u0439\u043b"
         },
         {
-            "location": "/io/sep/",
-            "text": "\"\n\n\n\u041f\u0438\u0448\u0435\u043c \u0438 \u0447\u0438\u0442\u0430\u0435\u043c \u0444\u0430\u0439\u043b\n\n\n\u0417\u0430\u043f\u0438\u0441\u044b\u0432\u0430\u0435\u0442 \u0438 \u0441\u0447\u0438\u0442\u044b\u0432\u0430\u0435\u0442 \u043f\u0440\u043e\u0441\u0442\u043e\u0439 \u0444\u0430\u0439\u043b.\n\n\nfile sep.txt\n------------\na 1\nb 2\n\n>>> x = [\n...     ('a', 1),\n...     ('b', 2)\n... ]\n\n# \u041f\u0438\u0448\u0435\u043c\n>>> with open('sep.txt', 'w') as f:\n...     for key, value in x:\n...         _ = f.write(\"{} {}\\\\n\".format(key, value))\n\n# \u0427\u0438\u0442\u0430\u0435\u043c\n>>> with open('sep.txt', 'r') as f:\n...     for line in f:\n...         print(line.split())\n['a', '1']\n['b', '2']",
-            "title": "\u041f\u0438\u0448\u0435\u043c \u0438 \u0447\u0438\u0442\u0430\u0435\u043c \u0444\u0430\u0439\u043b"
-        },
-        {
-            "location": "/io/sep/#_1",
+            "location": "/io_/save_file/#-",
             "text": "\u0417\u0430\u043f\u0438\u0441\u044b\u0432\u0430\u0435\u0442 \u0438 \u0441\u0447\u0438\u0442\u044b\u0432\u0430\u0435\u0442 \u043f\u0440\u043e\u0441\u0442\u043e\u0439 \u0444\u0430\u0439\u043b.  file sep.txt\n------------\na 1\nb 2\n\n>>> x = [\n...     ('a', 1),\n...     ('b', 2)\n... ]\n\n# \u041f\u0438\u0448\u0435\u043c\n>>> with open('sep.txt', 'w') as f:\n...     for key, value in x:\n...         _ = f.write(\"{} {}\\\\n\".format(key, value))\n\n# \u0427\u0438\u0442\u0430\u0435\u043c\n>>> with open('sep.txt', 'r') as f:\n...     for line in f:\n...         print(line.split())\n['a', '1']\n['b', '2']",
-            "title": "\u041f\u0438\u0448\u0435\u043c \u0438 \u0447\u0438\u0442\u0430\u0435\u043c \u0444\u0430\u0439\u043b"
+            "title": "\u041f\u0438\u0448\u0435\u043c \u0438 \u0447\u0438\u0442\u0430\u0435\u043c \u0444\u0430\u0439\u043b \u043a\u043b\u044e\u0447-\u0437\u043d\u0430\u0447\u0435\u043d\u0438\u0435"
         }
     ]
 }
