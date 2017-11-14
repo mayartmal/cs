@@ -27,14 +27,6 @@
 
     
     <url>
-     <loc>/arrays/primesieve/</loc>
-     <lastmod>2017-11-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
      <loc>/arrays/precalc/</loc>
      <lastmod>2017-11-14</lastmod>
      <changefreq>daily</changefreq>
@@ -44,14 +36,6 @@
     
     <url>
      <loc>/arrays/sample/</loc>
-     <lastmod>2017-11-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>/flow/euclid_distance/</loc>
      <lastmod>2017-11-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -84,6 +68,14 @@
     
     <url>
      <loc>/flow/income_rate/</loc>
+     <lastmod>2017-11-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/flow/distance/</loc>
      <lastmod>2017-11-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -139,14 +131,6 @@
 
     
     <url>
-     <loc>/flow/gauss/</loc>
-     <lastmod>2017-11-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
      <loc>/flow/polar/</loc>
      <lastmod>2017-11-14</lastmod>
      <changefreq>daily</changefreq>
@@ -188,22 +172,6 @@
     
     <url>
      <loc>/flow/quadratic/</loc>
-     <lastmod>2017-11-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>/flow/earth/</loc>
-     <lastmod>2017-11-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>/flow/sums_products/</loc>
      <lastmod>2017-11-14</lastmod>
      <changefreq>daily</changefreq>
     </url>

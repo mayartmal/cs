@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Множитеи и делители - База знаний Python</title>
+  <title>Множитеи, делители, простые числа - База знаний Python</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,7 +17,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "\u041c\u043d\u043e\u0436\u0438\u0442\u0435\u0438 \u0438 \u0434\u0435\u043b\u0438\u0442\u0435\u043b\u0438";
+    var mkdocs_page_name = "\u041c\u043d\u043e\u0436\u0438\u0442\u0435\u0438, \u0434\u0435\u043b\u0438\u0442\u0435\u043b\u0438, \u043f\u0440\u043e\u0441\u0442\u044b\u0435 \u0447\u0438\u0441\u043b\u0430";
     var mkdocs_page_input_path = "flow/prime.md";
     var mkdocs_page_url = "/flow/prime/";
   </script>
@@ -64,22 +64,12 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../../arrays/primesieve/">Решето Эратосфена</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
     <a class="" href="../../arrays/precalc/">Вычисление заранее</a>
 	    </li>
           
             <li class="toctree-l1">
 		
     <a class="" href="../../arrays/sample/">Случайные перестановки</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../euclid_distance/">Евклидово расстояние</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -104,6 +94,11 @@
           
             <li class="toctree-l1">
 		
+    <a class="" href="../distance/">Расстояния</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
     <a class="" href="../permutations/">Перестановки</a>
 	    </li>
           
@@ -124,7 +119,7 @@
           
             <li class="toctree-l1 current">
 		
-    <a class="current" href="./">Множитеи и делители</a>
+    <a class="current" href="./">Множитеи, делители, простые числа</a>
     <ul class="subnav">
             
     <li class="toctree-l2"><a href="#_1">Множитеи и делители</a></li>
@@ -138,17 +133,15 @@
         </ul>
     
 
+    <li class="toctree-l2"><a href="#_4">Решето Эратосфена</a></li>
+    
+
     </ul>
 	    </li>
           
             <li class="toctree-l1">
 		
     <a class="" href="../harmonic/">Гармонические числа</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../gauss/">Гауссовы случайные числа</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -183,17 +176,7 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../earth/">Большая окружность</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../sums_products/">Суммы</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../series/">Ряды</a>
+    <a class="" href="../series/">Ряды и суммы</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -223,7 +206,7 @@
     
       
     
-    <li>Множитеи и делители</li>
+    <li>Множитеи, делители, простые числа</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -285,6 +268,27 @@
 
 &gt;&gt;&gt; list(prime_factors(n=1233))
 [3, 3, 137]
+</code></pre>
+<h1 id="_4">Решето Эратосфена</h1>
+<pre><code>&gt;&gt;&gt; def sieve(n):
+...     is_prime = [True for _ in range(n + 1)]
+...
+...     for i in range(2, n):
+...         if is_prime[i]:
+...             for j in range(2, n//i + 1):
+...                 is_prime[i*j] = False
+...
+...     return sum(is_prime[i] for i in range(2, n))
+</code></pre>
+<p>Рассчитывает количество простых множителей &lt;= n</p>
+<pre><code>&gt;&gt;&gt; sieve(25)
+9
+
+&gt;&gt;&gt; sieve(100)
+25
+
+&gt;&gt;&gt; sieve(10000)
+1229
 </code></pre>
               
             </div>

@@ -64,11 +64,6 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../../arrays/primesieve/">Решето Эратосфена</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
     <a class="" href="../../arrays/precalc/">Вычисление заранее</a>
 	    </li>
           
@@ -77,17 +72,18 @@
     <a class="" href="../../arrays/sample/">Случайные перестановки</a>
 	    </li>
           
-            <li class="toctree-l1">
-		
-    <a class="" href="../euclid_distance/">Евклидово расстояние</a>
-	    </li>
-          
             <li class="toctree-l1 current">
 		
     <a class="current" href="./">Случайные числа</a>
     <ul class="subnav">
             
     <li class="toctree-l2"><a href="#_1">Случайные числа</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#_2">Гауссовы случайные числа</a></li>
+        
+        </ul>
     
 
     </ul>
@@ -106,6 +102,11 @@
             <li class="toctree-l1">
 		
     <a class="" href="../income_rate/">Непрерывный процент</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../distance/">Расстояния</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -130,17 +131,12 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../prime/">Множитеи и делители</a>
+    <a class="" href="../prime/">Множитеи, делители, простые числа</a>
 	    </li>
           
             <li class="toctree-l1">
 		
     <a class="" href="../harmonic/">Гармонические числа</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../gauss/">Гауссовы случайные числа</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -175,17 +171,7 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../earth/">Большая окружность</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../sums_products/">Суммы</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../series/">Ряды</a>
+    <a class="" href="../series/">Ряды и суммы</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -264,6 +250,32 @@
 &gt;&gt;&gt; 'Минимум: {:.2f}, Максимум: {:.2f}, Среднее: {:.2f}'.format(*r[1:])
 'Минимум: 0.03, Максимум: 0.95, Среднее: 0.47'
 </code></pre>
+<h2 id="_2">Гауссовы случайные числа</h2>
+<pre><code>&gt;&gt;&gt; import math
+&gt;&gt;&gt; import random
+
+
+&gt;&gt;&gt; def gauss(count: int):
+...     for _ in range(count):
+...         v = random.random()
+...         u = random.random()
+...         z = math.sin(2 * math.pi * v) * (-2 * math.log(u)) ** (1 / 2)
+...         yield z
+
+&gt;&gt;&gt; random.seed(2)
+&gt;&gt;&gt; count = 9
+&gt;&gt;&gt; for x in gauss(count):
+...    print(round(x, 2))
+-0.09
+0.77
+-0.67
+-1.34
+-0.62
+-0.94
+0.58
+-0.1
+-0.34
+</code></pre>
               
             </div>
           </div>
@@ -274,7 +286,7 @@
         <a href="../newton/" class="btn btn-neutral float-right" title="Метод Ньютона">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../euclid_distance/" class="btn btn-neutral" title="Евклидово расстояние"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../arrays/sample/" class="btn btn-neutral" title="Случайные перестановки"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -300,7 +312,7 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../euclid_distance/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../../arrays/sample/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
         <span style="margin-left: 15px"><a href="../newton/" style="color: #fcfcfc">Next &raquo;</a></span>
