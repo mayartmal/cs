@@ -64,22 +64,7 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../../arrays/precalc/">Вычисление заранее</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../arrays/sample/">Случайные перестановки</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
     <a class="" href="../rnd/">Случайные числа</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../newton/">Метод Ньютона</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -105,6 +90,9 @@
     <li class="toctree-l2"><a href="#_1">Перестановки</a></li>
     
 
+    <li class="toctree-l2"><a href="#_2">Случайные перестановки</a></li>
+    
+
     </ul>
 	    </li>
           
@@ -115,32 +103,12 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../mid_five/">Среднее из 5</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../monte_carlo/">Метод Монте-Карло</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
     <a class="" href="../prime/">Множитеи, делители, простые числа</a>
 	    </li>
           
             <li class="toctree-l1">
 		
-    <a class="" href="../harmonic/">Гармонические числа</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
     <a class="" href="../polar/">Полярные координаты</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../is_in_order/">Числа в порядке возрастания</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -160,12 +128,17 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../quadratic/">Квадратное уравнение</a>
+    <a class="" href="../roots/">Корни</a>
 	    </li>
           
             <li class="toctree-l1">
 		
     <a class="" href="../series/">Ряды и суммы</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../io_/parsecmd/">Парсим аргументы</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -243,6 +216,33 @@ Manual:
 ...     z[r], z[i] = z[i], z[r]
 &gt;&gt;&gt; print(z)
 [0, 1]
+</code></pre>
+<h1 id="_2">Случайные перестановки</h1>
+<p>Выборка неповторяющихся элементов.</p>
+<pre><code>&gt;&gt;&gt; import random
+
+&gt;&gt;&gt; def sample(a, n):
+...     res = []
+...     s = a
+...     for i in range(n):
+...         r = random.randrange(i, n)
+...         res.append(s[r])
+...         s[r], s[i] = s[i], s[r]
+...     return res
+
+&gt;&gt;&gt; random.seed(5)
+&gt;&gt;&gt; a = [3, 4, 1, 2, 5]
+&gt;&gt;&gt; sample(a, 5)
+[5, 2, 3, 1, 4]
+
+&gt;&gt;&gt; sample(a, 2)
+[2, 5]
+</code></pre>
+<p>Встроенная функция sample</p>
+<pre><code>&gt;&gt;&gt; random.seed(5)
+&gt;&gt;&gt; a = [3, 4, 1, 2, 5]
+&gt;&gt;&gt; random.sample(a, 5)
+[5, 1, 2, 4, 3]
 </code></pre>
               
             </div>
